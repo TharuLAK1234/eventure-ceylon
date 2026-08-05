@@ -1,0 +1,86 @@
+🖥️ STEP 2: ON OTHER MACHINE
+When someone uses the pen drive on another computer:
+
+What they need:
+✅ PHP 8.2+ installed
+✅ XAMPP installed (or standalone PHP)
+Steps to run:
+Step 1: Copy folder from pen drive to their computer
+
+C:\Users\[TheirName]\Desktop\eventure-ceylon\
+Step 2: Open Command Prompt and run:
+
+cd C:\Users\[TheirName]\Desktop\eventure-ceylon\public
+C:\xampp\php\php.exe -S localhost:8000
+Step 3: Open browser:
+
+http://localhost:8000
+✅ Done!
+
+
+
+
+📋 FULL SETUP FOR OTHER MACHINE
+If they don't have PHP/XAMPP installed:
+
+Step 1: Install XAMPP
+Download from: https://www.apachefriends.org/
+Install it (takes 5 minutes)
+Step 2: Copy your project
+Copy eventure-ceylon folder from pen drive
+Step 3: Run the app
+cd [path to eventure-ceylon]\public
+C:\xampp\php\php.exe -S localhost:8000
+Step 4: Access in browser
+http://localhost:8000
+🎯 WHAT THEY WILL SEE
+Same as you:
+
+✅ Home page at http://localhost:8000
+✅ Login page at http://localhost:8000/login
+✅ Register page at http://localhost:8000/register
+⚠️ IMPORTANT NOTES
+Issue	Solution
+PHP not found	Install XAMPP first
+Port 8000 taken	Use different port: php.exe -S localhost:8001
+Can't access	Make sure server is running
+Files corrupted	Copy carefully, don't interrupt transfer
+📱 NETWORK ACCESS
+Can they access from another computer on the network?
+
+Yes! Instead of localhost:8000, use:
+
+http://[YOUR_IP_ADDRESS]:8000
+Find your IP:
+
+ipconfig
+Look for: IPv4 Address: 192.168.x.x
+
+Then they can access from their computer:
+
+http://192.168.1.100:8000
+📝 QUICK SHARING GUIDE
+Create a text file README.txt on the pen drive:
+
+EVENTURE CEYLON - Setup Guide
+1. Install XAMPP from: https://www.apachefriends.org/
+2. Copy this folder to your computer:
+   C:\eventure-ceylon\
+3. Open Command Prompt and run:
+   cd C:\eventure-ceylon\public
+   C:\xampp\php\php.exe -S localhost:8000
+4. Open browser:
+   http://localhost:8000
+5. Enjoy! 🎉
+Questions? Contact Tharusha
+✅ CHECKLIST FOR SHARING
+✅ Copy eventure-ceylon folder to pen drive
+✅ Create README.txt with instructions
+✅ Verify folder copied completely
+✅ Test on another machine (optional)
+✅ Share pen drive with team
+Your project is now PORTABLE! 🚀
+
+Anyone with PHP/XAMPP can run it on any machine!
+
+Need help with anything else? 💪
