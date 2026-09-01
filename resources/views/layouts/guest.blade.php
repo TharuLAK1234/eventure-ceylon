@@ -8,7 +8,6 @@
         <title>{{ config('app.name', 'Eventure Ceylon') }}</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        @vite(['resources/css/app.css'])
     </head>
     <body class="bg-body-tertiary">
         <div class="d-flex flex-column align-items-center justify-content-center min-vh-100 py-4">
