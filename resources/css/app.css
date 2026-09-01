@@ -1,0 +1,5 @@
+/*
+ * Small overrides layered on top of Bootstrap 5 (loaded via CDN in the
+ * layouts). Keep this file lean — prefer Bootstrap utility classes in
+ * markup over new rules here.
+ */

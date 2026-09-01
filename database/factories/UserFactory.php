@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Role;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -29,6 +30,10 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
+            'role_id' => Role::firstOrCreate(
+                ['name' => Role::CUSTOMER],
+                ['display_name' => 'Customer']
+            )->id,
         ];
     }
 
@@ -39,6 +44,26 @@ class UserFactory extends Factory
     {
         return $this->state(fn (array $attributes) => [
             'email_verified_at' => null,
+        ]);
+    }
+
+    public function admin(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'role_id' => Role::firstOrCreate(
+                ['name' => Role::ADMIN],
+                ['display_name' => 'Admin']
+            )->id,
+        ]);
+    }
+
+    public function operationsStaff(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'role_id' => Role::firstOrCreate(
+                ['name' => Role::OPERATIONS_STAFF],
+                ['display_name' => 'Operations Staff']
+            )->id,
         ]);
     }
 }
