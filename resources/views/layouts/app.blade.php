@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <title>{{ config('app.name', 'Eventure Ceylon') }}</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body class="bg-body-tertiary">
+        <div class="min-vh-100 d-flex flex-column">
+            @include('layouts.navigation')
+
+            {{-- Page Heading --}}
+            @if (isset($header))
+                <header class="bg-white border-bottom">
+                    <div class="container py-4">
+                        {{ $header }}
+                    </div>
+                </header>
+            @endif
+
+            {{-- Page Content --}}
+            <main class="flex-grow-1">
+                {{ $slot }}
+            </main>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+    </body>
+</html>
